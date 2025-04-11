@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://miro.medium.com/v2/resize:fit:1132/1*8y9sCjaxFmAzEiVEzw3YoQ.jpeg');
+            background-size: cover;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        .poster {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .plot-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Movie Recommendations</h2>
+        <ul>
+            {% for movie_id, movie_title, poster_url in recommendations %}
+                <li>
+                    <h3>{{ movie_title }}</h3>
+                    <img src="{{ poster_url }}" alt="{{ movie_title }}" class="poster">
+                </li>
+            {% endfor %}
+        </ul>
+<!--        <button id="plot-button" class="plot-button">Plot Loss</button>-->
+    </div>
+
+<!--    <script>-->
+<!--        document.getElementById('plot-button').addEventListener('click', function() {-->
+<!--            // Send a GET request to the Flask server to trigger plot generation-->
+<!--            fetch('/plot')-->
+<!--                .then(response => {-->
+<!--                    if (response.ok) {-->
+<!--                        // Plot generation initiated successfully-->
+<!--                        alert('Plot generation initiated!');-->
+<!--                    } else {-->
+<!--                        // Plot generation failed-->
+<!--                        alert('Failed to initiate plot generation.');-->
+<!--                    }-->
+<!--                })-->
+<!--                .catch(error => {-->
+<!--                    console.error('Error:', error);-->
+<!--                    alert('Failed to initiate plot generation.');-->
+<!--                });-->
+<!--        });-->
+<!--    </script>-->
+</body>
+</html>

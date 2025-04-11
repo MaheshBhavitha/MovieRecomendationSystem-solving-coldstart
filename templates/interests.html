@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Interests</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://miro.medium.com/v2/resize:fit:1132/1*8y9sCjaxFmAzEiVEzw3YoQ.jpeg');
+            background-size: cover;
+        }
+
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input[type="checkbox"] {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Select Your Interests</h2>
+        <form action="/interests" method="post">
+            <input type="checkbox" name="genre" value="Action"> Action<br>
+            <input type="checkbox" name="genre" value="Comedy"> Comedy<br>
+            <input type="checkbox" name="genre" value="Drama"> Drama<br>
+            <input type="checkbox" name="genre" value="Adventure"> Adventure<br>
+            <input type="checkbox" name="genre" value="Horror"> Horror<br>
+            <input type="checkbox" name="genre" value="Romance"> Romance<br>
+            <input type="checkbox" name="genre" value="Sci-Fi"> Sci-Fi<br>
+            <input type="checkbox" name="genre" value="Thriller"> Thriller<br>
+            <input type="checkbox" name="genre" value="Fantasy"> Fantasy<br>
+            <input type="checkbox" name="genre" value="Animation"> Animation<br>
+            <input type="checkbox" name="genre" value="Mystery"> Mystery<br>
+            <input type="checkbox" name="genre" value="Documentary"> Documentary<br>
+            <button type="submit">Get Recommendations</button>
+        </form>
+    </div>
+</body>
+</html>
